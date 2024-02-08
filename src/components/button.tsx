@@ -2,10 +2,15 @@
 
 import { ButtonComponent } from "@/types/component-types";
 
-const Button: ButtonComponent = ({ title, containerStyles, handleClick }) => {
+const Button: ButtonComponent = ({
+    title,
+    type,
+    containerStyles,
+    handleClick,
+}) => {
     return (
         <button
-            type='button'
+            type={type}
             className={`custom-btn ${containerStyles}`}
             onClick={handleClick}
         >

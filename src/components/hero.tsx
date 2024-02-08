@@ -22,13 +22,14 @@ const Hero = () => {
                     handleClick={handleClick}
                 />
                 <div className='hero__image-container'>
-                    <div className='hero__image bg-hero-bg'>
+                    <div className='hero__image'>
                         <Image
                             src={"/static/images/hero.png"}
-                            width={400}
-                            height={400}
+                            fill
+                            className='object-contain'
                             alt='auto image'
                         />
+                        <div className='hero__image-overlay'></div>
                     </div>
                 </div>
             </div>

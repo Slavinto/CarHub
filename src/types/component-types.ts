@@ -9,6 +9,7 @@ export type Component<T> = FC<T>;
 // ================================================
 type ButtonProps = {
     title: string;
+    type: "button" | "submit" | "reset" | undefined;
     containerStyles: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>;
 };
