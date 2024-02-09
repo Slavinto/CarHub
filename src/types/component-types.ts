@@ -23,3 +23,9 @@ type FooterLinkProps = {
 
 export type FooterLinkComponent = Component<FooterLinkProps>;
 // ================================================
+type CustomFilterProps = {
+    title: string;
+};
+
+export type CustomFilterComponent = Component<CustomFilterProps>;
+// ================================================
