@@ -22,17 +22,17 @@ const Hero = () => {
                     }
                     handleClick={handleClick}
                 />
-                <div className='hero__image-container'>
-                    <div className='hero__image'>
-                        <Image
-                            src={"/static/images/hero.png"}
-                            fill
-                            className='object-contain'
-                            alt='auto image'
-                        />
-                        <div className='hero__image-overlay'></div>
-                    </div>
+            </div>
+            <div className='hero__image-container'>
+                <div className='hero__image'>
+                    <Image
+                        src={"/static/images/hero.png"}
+                        fill
+                        className='object-contain'
+                        alt='auto image'
+                    />
                 </div>
+                <div className='hero__image-overlay' />
             </div>
         </section>
     );
