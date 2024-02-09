@@ -1,4 +1,4 @@
-import type { FC, MouseEventHandler } from "react";
+import type { Dispatch, FC, MouseEventHandler, SetStateAction } from "react";
 
 // ================================================
 // General types
@@ -28,4 +28,12 @@ type CustomFilterProps = {
 };
 
 export type CustomFilterComponent = Component<CustomFilterProps>;
+// ================================================
+type SearchManufacturerProps = {
+    manufacturer: string;
+    setManufacturer: Dispatch<SetStateAction<string>>;
+};
+
+export type SearchManufacturerComponent = Component<SearchManufacturerProps>;
+// ================================================
 // ================================================
