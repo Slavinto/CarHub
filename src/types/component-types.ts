@@ -16,3 +16,10 @@ type ButtonProps = {
 
 export type ButtonComponent = Component<ButtonProps>;
 // ================================================
+type FooterLinkProps = {
+    title: string;
+    url: string;
+};
+
+export type FooterLinkComponent = Component<FooterLinkProps>;
+// ================================================

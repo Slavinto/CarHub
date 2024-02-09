@@ -16,6 +16,7 @@ const Hero = () => {
                 </p>
                 <Button
                     title={"Explore Cars"}
+                    type='button'
                     containerStyles={
                         "bg-primary-blue text-white rounded-full mt-10"
                     }
