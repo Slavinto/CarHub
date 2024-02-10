@@ -22,9 +22,9 @@ export default async function Home() {
                     </div>
                 </div>
             </div>
-            <section>
+            <section className='padding-x'>
                 {!!allCars && Array.isArray(allCars) && allCars.length > 0 ? (
-                    <div className='home__cards-wrapper'>
+                    <div className='home__cars-wrapper'>
                         {allCars.map((car, id) => (
                             <CarCard key={id} car={car} />
                         ))}
