@@ -2,11 +2,9 @@ import { CarCard, CustomFilter, Hero, SearchBar } from "@/components";
 import Image from "next/image";
 
 import { fetchCarsApi } from "@/utils";
-import { json } from "stream/consumers";
 
 export default async function Home() {
-    const allCars = [""];
-    // await fetchCarsApi();
+    const allCars = await fetchCarsApi();
 
     return (
         <main className='overflow-hidden'>
