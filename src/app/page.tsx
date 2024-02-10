@@ -1,7 +1,13 @@
-import { CustomFilter, Hero, SearchBar } from "@/components";
+import { CarCard, CustomFilter, Hero, SearchBar } from "@/components";
 import Image from "next/image";
 
-export default function Home() {
+import { fetchCarsApi } from "@/utils";
+import { json } from "stream/consumers";
+
+export default async function Home() {
+    const allCars = [""];
+    // await fetchCarsApi();
+
     return (
         <main className='overflow-hidden'>
             <Hero />
@@ -18,6 +24,22 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <section>
+                {!!allCars && Array.isArray(allCars) && allCars.length > 0 ? (
+                    <div className='home__cards-wrapper'>
+                        {allCars.map((car, id) => (
+                            <CarCard key={id} car={car} />
+                        ))}
+                    </div>
+                ) : (
+                    <div className='home__error-container'>
+                        <h2 className='text-black text-xl font-bold'>
+                            Something went wrong:
+                        </h2>
+                        <p>{JSON.stringify(allCars)}</p>
+                    </div>
+                )}
+            </section>
         </main>
     );
 }
