@@ -8,6 +8,7 @@ import { calculateCarRent } from "@/utils";
 
 const CarCard: CarCardComponent = ({ car }) => {
     const [isOpen, setIsOpen] = useState(false);
+    console.log(isOpen);
     const {
         city_mpg,
         class: car_class,
@@ -88,6 +89,7 @@ const CarCard: CarCardComponent = ({ car }) => {
                     />
                 </div>
             </div>
+            <CarDetails />
         </div>
     );
 };
