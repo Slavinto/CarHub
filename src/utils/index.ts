@@ -1,8 +1,7 @@
 import { Car } from "@/types/component-types";
 
-export const fetchCarsApi = async () => {
-    const baseUrl =
-        "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla";
+export const fetchCarsApi = async (searchString: string) => {
+    const baseUrl = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars${searchString}`;
     const options = {
         method: "GET",
         headers: {

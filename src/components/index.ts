@@ -7,3 +7,4 @@ export { default as CustomFilter } from "./custom-filter";
 export { default as SearchManufacturer } from "./search-manufacturer";
 export { default as CarCard } from "./car-card";
 export { default as CarDetails } from "./car-details";
+export { default as SearchButton } from "./search-button";
