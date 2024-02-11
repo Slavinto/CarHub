@@ -1,3 +1,5 @@
+import { Car } from "@/types/component-types";
+
 export const fetchCarsApi = async () => {
     const baseUrl =
         "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla";
@@ -34,3 +36,5 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
 
     return rentalRatePerDay.toFixed(0);
 };
+
+export const generateCarImageUrl = (car: Car, angle?: string) => {};
