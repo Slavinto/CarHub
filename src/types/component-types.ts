@@ -38,7 +38,7 @@ type SearchManufacturerProps = {
 
 export type SearchManufacturerComponent = Component<SearchManufacturerProps>;
 // ================================================
-type Car = {
+export type Car = {
     city_mpg: number;
     class: string;
     combination_mpg: number;
@@ -59,4 +59,11 @@ type CarCardProps = {
 
 export type CarCardComponent = Component<CarCardProps>;
 // ================================================
+type CarDetailsProps = {
+    isOpen: boolean;
+    toggleModal: () => void;
+    car: Car;
+};
+
+export type CarDetailsComponent = Component<CarDetailsProps>;
 // ================================================

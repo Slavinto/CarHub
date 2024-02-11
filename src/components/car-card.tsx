@@ -2,13 +2,15 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import { Button } from ".";
+import { Button, CarDetails } from ".";
 import type { CarCardComponent } from "@/types/component-types";
 import { calculateCarRent } from "@/utils";
 
 const CarCard: CarCardComponent = ({ car }) => {
     const [isOpen, setIsOpen] = useState(false);
-    console.log(isOpen);
+
+    const toggleModal = () => setIsOpen((prev: boolean) => !prev);
+
     const {
         city_mpg,
         class: car_class,
@@ -85,11 +87,11 @@ const CarCard: CarCardComponent = ({ car }) => {
                         containerStyles='w-full py-[16px] rounded-full bg-primary-blue'
                         textStyles='text-white text-[14px] leading-[17px] font-bold'
                         rightIcon='/static/images/right-arrow.svg'
-                        handleClick={() => setIsOpen((prev: boolean) => !prev)}
+                        handleClick={toggleModal}
                     />
                 </div>
             </div>
-            <CarDetails />
+            <CarDetails isOpen={isOpen} toggleModal={toggleModal} car={car} />
         </div>
     );
 };
